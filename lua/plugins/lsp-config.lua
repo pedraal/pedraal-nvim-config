@@ -30,14 +30,14 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.biome.setup({
-			  capabilities = capabilities,
+				capabilities = capabilities,
 			})
 			lspconfig.html.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.volar.setup({
 				capabilities = capabilities,
-				filetypes = { "typescript", "javascript", "vue" },
+				filetypes = { "vue" },
 				init_options = {
 					vue = {
 						hybridMode = false,
@@ -47,7 +47,7 @@ return {
 			vim.keymap.set("n", "gh", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "ga", vim.lsp.buf.code_action, {})
-      vim.keymap.set("n", "<leader>gd", vim.diagnostic.open_float, {})
-  end,
+			vim.keymap.set("n", "<leader>gd", vim.diagnostic.open_float, {})
+		end,
 	},
 }
