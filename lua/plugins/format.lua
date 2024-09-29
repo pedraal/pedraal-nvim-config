@@ -28,11 +28,16 @@ return {
 					lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
 				}
 			end,
+			formatters = {
+				biome = {
+					require_cwd = true,
+				},
+			},
 			formatters_by_ft = {
 				lua = { "stylua" },
-				javascript = { "ts_ls", "eslint_d" },
-				typescript = { "ts_ls", "eslint_d" },
-				vue = { "volar", "eslint_d" },
+				javascript = { "eslint_d", "biome" },
+				typescript = { "eslint_d", "biome" },
+				vue = { "eslint_d", "biome" },
 			},
 		},
 	},

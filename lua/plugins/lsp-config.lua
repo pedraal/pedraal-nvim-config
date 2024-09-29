@@ -32,6 +32,9 @@ return {
 			lspconfig.biome.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.eslint.setup({
+				capabilities = capabilities,
+			})
 			lspconfig.html.setup({
 				capabilities = capabilities,
 			})
